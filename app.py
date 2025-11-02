@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
-from joblib import load
 import pandas as pd
+from joblib import load
 
 # Load model
 model = load(open('xgboost.joblib', 'rb'))
@@ -48,7 +48,7 @@ with st.expander("📖 Click to learn what each feature means"):
             
     """)
 
-# Optional: Ask for patient name
+# Ask for patient name
 name = st.text_input("👤 Patient Name")
 
 
@@ -89,6 +89,6 @@ if st.button("📄 Generate Medical Report"):
         mime='text/csv'
     )
 
-    #Footer
+    # Footer
 st.markdown("---")
 st.caption("Built with ❤️ by Anushka Pal")
