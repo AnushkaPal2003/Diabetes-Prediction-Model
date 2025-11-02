@@ -2,6 +2,12 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from joblib import load
+try:
+    from joblib import load
+except ImportError:
+    import subprocess
+    subprocess.run(["pip", "install", "joblib"])
+    
 
 # Load model
 model = load(open('xgboost.joblib', 'rb'))
