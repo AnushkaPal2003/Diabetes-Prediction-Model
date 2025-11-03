@@ -1,3 +1,6 @@
+import subprocess
+subprocess.run(["pip", "install", "joblib"])
+
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -5,7 +8,7 @@ from joblib import load
 
     
 # Load model
-model = load( r"D:\\Diabetes Folder\\xgboost.joblib")
+model = load("xgboost.joblib")
 
 # Page config
 st.set_page_config(page_title="Diabetes Risk Predictor", layout="centered")
